@@ -81,3 +81,19 @@ body {
     cursor: pointer;
     box-shadow: 1px 1px 3px #0007;
   }
+
+  #controls {
+    width: 400px;
+    margin: 10px auto;
+    text-align: center;
+  }
+  #controls button {
+    width: 80px;
+    height: 40px;
+    margin: 0 10px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    border: none;
+    background: #48f;
+    color: #fff;
+  }

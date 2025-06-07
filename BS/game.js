@@ -18,6 +18,9 @@ let canShoot = true;
 const gameArea = document.getElementById('gameArea');
 const info = document.getElementById('info');
 const msg = document.getElementById('msg');
+const leftBtn = document.getElementById('leftBtn');
+const rightBtn = document.getElementById('rightBtn');
+const shootBtn = document.getElementById('shootBtn');
 
 // ゲーム状態
 let player = {};
@@ -242,6 +245,20 @@ document.addEventListener('keydown', e => {
 document.addEventListener('keyup', e => {
   keys[e.key] = false;
 });
+
+function bindButton(btn, key) {
+  if (!btn) return;
+  ['mousedown', 'touchstart'].forEach(ev => {
+    btn.addEventListener(ev, e => { e.preventDefault(); keys[key] = true; });
+  });
+  ['mouseup', 'mouseleave', 'touchend', 'touchcancel'].forEach(ev => {
+    btn.addEventListener(ev, e => { e.preventDefault(); keys[key] = false; });
+  });
+}
+
+bindButton(leftBtn, 'ArrowLeft');
+bindButton(rightBtn, 'ArrowRight');
+bindButton(shootBtn, ' ');
 
 // =====================
 // ゲーム開始
