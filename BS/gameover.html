@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>ゲームオーバー</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="info"></div>
+  <div id="gameArea">
+    <div id="msg">ゲームオーバー<br><button id="retryBtn">リトライ</button></div>
+  </div>
+  <script>
+    document.getElementById('retryBtn').onclick = () => {
+      location.href = 'index.html';
+    };
+  </script>
+</body>
+</html>

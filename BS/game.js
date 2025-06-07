@@ -224,8 +224,7 @@ function bossDefeated() {
 // =====================
 function gameOver() {
   isGameOver = true;
-  showMessage(`ゲームオーバー<br><button id="restartBtn">リトライ</button>`);
-  document.getElementById('restartBtn').onclick = () => init(1);
+  location.href = 'gameover.html';
 }
 
 // =====================
