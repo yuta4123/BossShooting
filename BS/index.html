@@ -6,8 +6,12 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="info"></div>
-  <div id="gameArea">
+  <div id="startScreen">
+    <h1>Boss Shooting Game</h1>
+    <button id="startBtn">ゲームスタート</button>
+  </div>
+  <div id="info" style="display:none;"></div>
+  <div id="gameArea" style="display:none;">
     <div id="msg"></div>
   </div>
   <script src="stages/stage1.js"></script>
@@ -15,5 +19,13 @@
   <script src="stages/stage3.js"></script>
   <script src="stages/stage4.js"></script>
   <script src="game.js"></script>
+  <script>
+    document.getElementById('startBtn').onclick = () => {
+      document.getElementById('startScreen').style.display = 'none';
+      document.getElementById('info').style.display = '';
+      document.getElementById('gameArea').style.display = '';
+      init(1);
+    };
+  </script>
 </body>
 </html>
