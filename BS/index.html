@@ -14,6 +14,11 @@
   <div id="gameArea" style="display:none;">
     <div id="msg"></div>
   </div>
+  <div id="touchControls" style="display:none;">
+    <button id="leftBtn">◀</button>
+    <button id="shootBtn">●</button>
+    <button id="rightBtn">▶</button>
+  </div>
   <script src="stages/stage1.js"></script>
   <script src="stages/stage2.js"></script>
   <script src="stages/stage3.js"></script>
@@ -24,6 +29,7 @@
       document.getElementById('startScreen').style.display = 'none';
       document.getElementById('info').style.display = '';
       document.getElementById('gameArea').style.display = '';
+      document.getElementById('touchControls').style.display = '';
       init(1);
     };
   </script>
