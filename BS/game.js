@@ -5,9 +5,9 @@ const GAME_W = 400, GAME_H = 600;
 const PLAYER_SPEED = 6;
 const BULLET_SPEED = 8;
 const ENEMY_BULLET_SPEED = 4;
-const BOSS_HP_LIST = [40, 60, 90, 120];
+const stages = window.stages || [];
+const STAGE_MAX = stages.length;
 const PLAYER_MAX_HP = 5;
-const STAGE_MAX = 4;
 
 let stage = 1;
 let isGameOver = false;
@@ -25,16 +25,6 @@ let bullets = [];
 let boss = {};
 let enemyBullets = [];
 let keys = {};
-
-// =====================
-// ボスの設定
-// =====================
-const bossData = [
-  { name: "ボス1", color: "#f22" },
-  { name: "ボス2", color: "#2cf" },
-  { name: "ボス3", color: "#9f3" },
-  { name: "ボス4", color: "#fc2" },
-];
 
 // =====================
 // ゲーム初期化
@@ -63,13 +53,14 @@ function init(stageNum=1) {
   gameArea.appendChild(player.node);
 
   // ボス描画
+  const stageInfo = stages[stage-1];
   boss = {
     x: GAME_W/2 - 40,
     y: 40,
-    hp: BOSS_HP_LIST[stage-1],
-    maxHp: BOSS_HP_LIST[stage-1],
-    name: bossData[stage-1].name,
-    color: bossData[stage-1].color,
+    hp: stageInfo.hp,
+    maxHp: stageInfo.hp,
+    name: stageInfo.name,
+    color: stageInfo.color,
     node: null,
     moveAngle: 0
   };
