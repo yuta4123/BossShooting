@@ -202,11 +202,11 @@ function isHit(a, b, r) {
 function bossDefeated() {
   if (stage < STAGE_MAX) {
     isClear = true;
-    showMessage(`ステージ${stage}クリア！<br><button id="nextStageBtn">次のステージへ</button>`);
+    showMessage(`ステージ${stage}クリア！<br><button id="nextStageBtn" aria-label="次のステージへ">次のステージへ</button>`);
     document.getElementById('nextStageBtn').onclick = () => init(stage+1);
   } else {
     isClear = true;
-    showMessage(`全ステージクリア！<br><button id="restartBtn">もう一度遊ぶ</button>`);
+    showMessage(`全ステージクリア！<br><button id="restartBtn" aria-label="もう一度遊ぶ">もう一度遊ぶ</button>`);
     document.getElementById('restartBtn').onclick = () => init(1);
   }
 }
