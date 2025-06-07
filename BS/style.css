@@ -70,7 +70,7 @@ body {
     z-index: 10;
     text-shadow: 1px 1px 3px #000;
   }
-  #nextStageBtn, #restartBtn {
+  #nextStageBtn, #restartBtn, #retryBtn {
     font-size: 1.2rem;
     padding: 8px 24px;
     margin: 16px;
