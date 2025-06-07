@@ -18,6 +18,9 @@ let canShoot = true;
 const gameArea = document.getElementById('gameArea');
 const info = document.getElementById('info');
 let msg = document.getElementById('msg');
+const leftBtn = document.getElementById('leftBtn');
+const rightBtn = document.getElementById('rightBtn');
+const shootBtn = document.getElementById('shootBtn');
 
 // ゲーム状態
 let player = {};
@@ -243,6 +246,37 @@ document.addEventListener('keydown', e => {
 document.addEventListener('keyup', e => {
   keys[e.key] = false;
 });
+
+if (leftBtn) {
+  leftBtn.addEventListener('touchstart', e => {
+    keys['ArrowLeft'] = true;
+    e.preventDefault();
+  });
+  leftBtn.addEventListener('touchend', e => {
+    keys['ArrowLeft'] = false;
+    e.preventDefault();
+  });
+}
+if (rightBtn) {
+  rightBtn.addEventListener('touchstart', e => {
+    keys['ArrowRight'] = true;
+    e.preventDefault();
+  });
+  rightBtn.addEventListener('touchend', e => {
+    keys['ArrowRight'] = false;
+    e.preventDefault();
+  });
+}
+if (shootBtn) {
+  shootBtn.addEventListener('touchstart', e => {
+    if (canShoot) {
+      canShoot = false;
+      shoot();
+      setTimeout(() => canShoot = true, 200);
+    }
+    e.preventDefault();
+  });
+}
 
 // =====================
 // ゲーム開始は index.html から呼び出す

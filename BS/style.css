@@ -96,14 +96,32 @@ body {
     font-family: sans-serif;
   }
 
-  #startBtn {
-    font-size: 1.5rem;
-    padding: 8px 32px;
-    margin-top: 24px;
-    border-radius: 8px;
-    border: none;
-    background: #48f;
-    color: #fff;
-    cursor: pointer;
-    box-shadow: 1px 1px 3px #0007;
-  }
+#startBtn {
+  font-size: 1.5rem;
+  padding: 8px 32px;
+  margin-top: 24px;
+  border-radius: 8px;
+  border: none;
+  background: #48f;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 1px 1px 3px #0007;
+}
+
+#touchControls {
+  width: 400px;
+  margin: 8px auto;
+  text-align: center;
+}
+
+#touchControls button {
+  width: 80px;
+  height: 80px;
+  font-size: 2rem;
+  margin: 0 10px;
+  border-radius: 50%;
+  border: none;
+  background: #48f;
+  color: #fff;
+  box-shadow: 1px 1px 3px #0007;
+}
