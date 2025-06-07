@@ -69,7 +69,6 @@ body {
     left: 0;
     z-index: 10;
     text-shadow: 1px 1px 3px #000;
-    pointer-events: none;
   }
   #nextStageBtn, #restartBtn {
     font-size: 1.2rem;

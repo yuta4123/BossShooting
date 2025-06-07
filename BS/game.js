@@ -17,7 +17,7 @@ let canShoot = true;
 // DOM取得
 const gameArea = document.getElementById('gameArea');
 const info = document.getElementById('info');
-const msg = document.getElementById('msg');
+let msg = document.getElementById('msg');
 
 // ゲーム状態
 let player = {};
@@ -41,6 +41,7 @@ const bossData = [
 // =====================
 function init(stageNum=1) {
   gameArea.innerHTML = '<div id="msg"></div>';
+  msg = document.getElementById('msg');
   msg.textContent = "";
   bullets = [];
   enemyBullets = [];
@@ -224,8 +225,7 @@ function bossDefeated() {
 // =====================
 function gameOver() {
   isGameOver = true;
-  showMessage(`ゲームオーバー<br><button id="restartBtn">リトライ</button>`);
-  document.getElementById('restartBtn').onclick = () => init(1);
+  location.href = 'gameover.html';
 }
 
 // =====================
