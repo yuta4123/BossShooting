@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    background: #111;
+  }
+  #gameArea {
+    position: relative;
+    width: 400px;
+    height: 600px;
+    margin: 20px auto;
+    background: #222;
+    border: 4px solid #555;
+    overflow: hidden;
+  }
+  #info {
+    width: 400px;
+    margin: 8px auto;
+    color: #eee;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 1rem;
+  }
+  .player, .boss, .bullet, .enemyBullet {
+    position: absolute;
+    border-radius: 50%;
+  }
+  .player {
+    width: 36px;
+    height: 36px;
+    background: #4af;
+    bottom: 24px;
+    left: 182px;
+    border: 2px solid #fff;
+    box-sizing: border-box;
+  }
+  .bullet {
+    width: 8px;
+    height: 16px;
+    background: #fff;
+  }
+  .boss {
+    width: 80px;
+    height: 80px;
+    top: 40px;
+    left: 160px;
+    border: 3px solid gold;
+    background: #f22;
+    box-sizing: border-box;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: sans-serif;
+    text-shadow: 1px 1px 2px #000;
+  }
+  .enemyBullet {
+    width: 12px;
+    height: 20px;
+    background: #fb2;
+    border: 1px solid #c00;
+  }
+  #msg {
+    color: #ff0;
+    font-size: 2rem;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 40%;
+    left: 0;
+    z-index: 10;
+    text-shadow: 1px 1px 3px #000;
+    pointer-events: none;
+  }
+  #nextStageBtn, #restartBtn {
+    font-size: 1.2rem;
+    padding: 8px 24px;
+    margin: 16px;
+    border-radius: 8px;
+    border: none;
+    background: #48f;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 1px 1px 3px #0007;
+  }
+  
