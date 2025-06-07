@@ -107,3 +107,7 @@ body {
     cursor: pointer;
     box-shadow: 1px 1px 3px #0007;
   }
+
+  #controls button {
+    touch-action: none;
+  }
